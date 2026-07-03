@@ -1,6 +1,6 @@
 # NotchIsland
 
-A macOS overlay app that turns the 16-inch MacBook Pro notch into a Dynamic-Island-style status surface. It sits above every window (including full-screen apps), stays hidden behind the physical notch when idle, and expands into Music controls, a Pomodoro timer, and a slideover with sticky notes plus Apple Reminders.
+A macOS overlay app that turns the MacBook Pro notch into a Dynamic-Island-style status surface similar to what you will find on iPhone, but with macOS workflow features. It sits above every window (including full-screen apps), stays hidden behind the physical notch when idle, and expands into Music controls, a Pomodoro timer, and a slideover with sticky notes plus Apple Reminders.
 
 ## Features
 
@@ -8,7 +8,7 @@ A macOS overlay app that turns the 16-inch MacBook Pro notch into a Dynamic-Isla
 - **Music (Now Playing)** — reads Music.app via AppleScript. The compact pill shows album art on the left of the notch and an animated waveform on the right. Hover to spring into an expanded card with title, artist, album, a scrub bar that extrapolates smoothly between polls, and prev / play-pause / next controls.
 - **Pomodoro** — 25/5 auto-looping timer started from the menu-bar item. Expanded view shows a progress ring, a large MM:SS countdown, and a stop button.
 - **Split-pill** — with Music playing and Pomodoro running, the primary pill stays anchored to the notch and a secondary detached pill appears to the right with the timer countdown.
-- **Slideover** — a third pill to the left of the primary. Tap to unfurl it downward into a card with two tabs:
+- **Slideover** — a third pill to the left of the primary. Tap to expand it downward into a card with two tabs:
   - **Notes** — a scratch pad persisted via `@AppStorage`.
   - **Reminders** — live-linked to Apple Reminders via EventKit. Overdue items show in red. Completing a row syncs to the system Reminders app immediately.
 
@@ -137,7 +137,7 @@ The panel's `canBecomeKey` is gated on a `keyboardEnabled` flag. `NotchWindowCon
 ## Known limits
 
 - The `880 × 340` panel consumes hit-tests over its transparent area, blocking menu-bar clicks in the central strip. Fix would be a custom `NSView.hitTest` that only claims the shape paths.
-- Scrub bar is display-only. Interactive scrubbing needs a `DragGesture` calling `MusicController.seek(to:)`.
+- Scrub bar is display-only. Interactive scrubbing needs a `DragGesture` calling `MusicController.seek(to:)`. This has been left out due to increased consumption of CPU, GPU and battery.
 - Legacy PICT artwork returned by some tracks won't decode — falls back to the music-note icon.
-- Pomodoro auto-loops. No configurable durations, no chime on phase transitions.
+- Pomodoro auto-loops. No configurable durations, no chime on phase transitions. TO BE ADDED.
 - Not sandboxed. Ships as-is for local use only; App Store distribution would require re-adding the sandbox with a temporary-exception `apple-events` entitlement and a real `.entitlements` file.
