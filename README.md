@@ -1,6 +1,19 @@
 # NotchIsland
+<p align="center">
+<img width="512" height="512" alt="NotchIsland-iOS-Default-512x512@1x" src="https://github.com/user-attachments/assets/8cf821be-bd98-4c4c-9290-bc5251ae06e7" />
+</p>
 
 A macOS overlay app that turns the MacBook Pro notch into a Dynamic-Island-style status surface similar to what you will find on iPhone, but with macOS workflow features. It sits above every window (including full-screen apps), stays hidden behind the physical notch when idle, and expands into Music controls, a Pomodoro timer, and a slideover with sticky notes plus Apple Reminders.
+
+<img width="2056" height="1329" alt="Screenshot 2026-07-03 at 1 44 52 PM" src="https://github.com/user-attachments/assets/528cd57f-105d-43cc-9997-7a181791902a" />
+
+<p align="center">
+<img width="49%" height="155" alt="Screenshot 2026-07-03 at 1 49 30 PM" src="https://github.com/user-attachments/assets/aefcde26-5351-44e6-8aa2-26a0074e3181" />
+<img width="49%" height="190" alt="Screenshot 2026-07-03 at 1 49 03 PM" src="https://github.com/user-attachments/assets/c408841c-e421-40e0-b792-a54d44dc9822" />
+</p>
+<p align="center">
+<img width="670" height="310" alt="Screenshot 2026-07-03 at 1 45 38 PM" src="https://github.com/user-attachments/assets/abf0a5a2-b80b-4637-ad39-873aa62a979d" />
+</p>
 
 ## Features
 
